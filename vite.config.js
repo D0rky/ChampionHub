@@ -7,7 +7,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/championhub/',
+  base: '/ChampionHub/',
   plugins: [vue()],
   resolve: {
     alias: {
