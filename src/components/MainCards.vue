@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import useAPI from '@/composables/useAPI'
-import MainCardsSingle from '@/components/MainCardSingle.vue'
+import MainCardsSingle from '@/components/MainCardsSingle.vue'
 import MainSearch from '@/components/MainSearch.vue'
 
 const { Champions } = useAPI()
@@ -9,7 +9,7 @@ const search = ref('');
 
 const filteredList = computed(() => {
     return Champions.value.filter(Champions =>
-        demon.name.toLowerCase().includes(search.value.toLowerCase())
+        Champions.name.toLowerCase().includes(search.value.toLowerCase())
     );
 });
 
