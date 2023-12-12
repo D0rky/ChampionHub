@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 import axios from 'axios'
 
+
 const Champions = ref([])
 const pages = ref(1)
 const loading = ref(false)
@@ -18,7 +19,7 @@ const api = axios.create({
 
 const getChampions = async () => {
   loading.value = true
-  const { data, headers } = await api.get('/api/Champions', {
+  const { data, headers } = await api.get('/api/champions', {
     params: {
       page: activePage.value,
       size: pageSize.value,

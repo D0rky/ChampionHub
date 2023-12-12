@@ -1,23 +1,25 @@
 <script setup>
 import { defineProps } from 'vue'
+import useAPI from '@/composables/useAPI'
 
 const selectCard = () => {
-    console.log(`${props.champion.name} selected`)
+    console.log(`${props.Champion.id} selected`)
 }
 
 const props = defineProps({
-    champion: {
+    Champion: {
         type: Object,
         required: true,
         default: () => {
             return {
-                id: '1',
+                id: 'aatrox',
                 key: 1,
                 name: 'Champion Name',
                 title: 'Title',
                 tags: 'Support',
                 stats: 0,
                 description: 'Description',
+                icon: 'Icon', // Assuming icon property is used for the champion's icon
             }
         },
     },
@@ -25,16 +27,16 @@ const props = defineProps({
 </script>
 
 <template>
-    <RouterLink v-if="props.champion.id" :to="`/api/champion/${props.champion.id}`">
+    <RouterLink v-if="props.Champion.id" :to="`/api/Champion/${props.Champion.id}`">
         <div class="card" @click="selectCard">
             <div class="card-image">
-                <!-- Replace this with your champion image -->
-                <img :src="props.champion.image" alt="" srcset="" />
+                <!-- Replace this with your champion icon -->
+                <img :src="props.Champion.icon" alt="" srcset="" />
             </div>
             <div class="card-details">
-                <p class="card-details-name font-poppins">{{ props.champion.name }}</p>
-                <p class="card-details-name">{{ props.champion.title }}</p>
-                <p class="card-details-name">{{ props.champion.description }}</p>
+                <p class="card-details-name font-poppins">{{ props.Champion.name }}</p>
+                <p class="card-details-name">{{ props.Champion.title }}</p>
+                <p class="card-details-name">{{ props.Champion.description }}</p>
             </div>
         </div>
     </RouterLink>

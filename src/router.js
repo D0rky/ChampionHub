@@ -10,10 +10,10 @@ import NotFound from '@/components/NotFound.vue'
 const routes = [
   { path: '/ChampionHub/', name: 'Home', component: MainPage },
   { path: '/login', name: 'Login', component: LoginPage },
-  { path: '/settings', name: 'Settings', component: SettingsPage, meta: {requiresAuth: true} },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  { path: '/settings', name: 'Settings', component: SettingsPage, meta: { requiresAuth: true } },
   { path: '/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
-  { path: '/api/Champions/:id', name: 'Champions', component: () => import('@/views/ChampionsPage.vue')},
+  { path: '/api/champions/:id', name: 'champion', component: () => import('@/views/ChampionsPage.vue')},
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
 const router = createRouter({
