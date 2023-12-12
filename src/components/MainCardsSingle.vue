@@ -36,7 +36,7 @@ const props = defineProps({
             <div class="card-details">
                 <p class="card-details-name font-poppins">{{ props.Champion.name }}</p>
                 <p class="card-details-name">{{ props.Champion.title }}</p>
-                <p class="card-details-name">{{ props.Champion.description }}</p>
+                <p class="card-details-name">{{ props.Champion.tags }}</p>
             </div>
         </div>
     </RouterLink>
