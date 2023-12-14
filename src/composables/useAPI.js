@@ -26,7 +26,9 @@ const getChampions = async () => {
     },
   })
   Champions.value = data
-  pages.value = Number(headers['x-total-pages']) || 1
+  pages.value = Number(headers['x-total-pages']) || 13
+
+  console.log(data)
   loading.value = false
 }
 

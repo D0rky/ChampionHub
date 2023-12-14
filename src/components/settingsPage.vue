@@ -26,12 +26,12 @@ const addChampion = async () => {
   const { data } = await api.post('/api/Champions', {
     icon: ChampionIcon.value,
     id: Championsid.value,
-    key: ChampionsKey.value,
+    key: Number(ChampionsKey.value),
     name: ChampionsName.value,
     title: ChampionsTitle.value,
     tags: ChampionsTags.value,
-    stats: ChampionsStats.value,
-    description: ChampionDesc.value,
+    stats: Number(ChampionsStats.value),
+    description: ChampionDesc.value
   })
 }
 </script>
