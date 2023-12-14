@@ -22,7 +22,7 @@ const ChampionIcon = ref('')
 
 
 
-const addChampions = async () => {
+const addChampion = async () => {
   const { data } = await api.post('/api/Champions', {
     icon: ChampionIcon.value,
     id: Championsid.value,
