@@ -7,6 +7,8 @@ import SettingsPage from '@/components/settingsPage.vue'
 import NotFound from '@/components/NotFound.vue'
 
 
+
+
 const routes = [
   { path: '/ChampionHub/', name: 'Home', component: MainPage },
   { path: '/login', name: 'Login', component: LoginPage },
@@ -14,6 +16,7 @@ const routes = [
   { path: '/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
   { path: '/api/champions/:id', name: 'champion', component: () => import('@/views/ChampionsPage.vue')},
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  { path: '/api/Champion/:id', name: 'Details', component: () => import('@/views/ChampionDetails.vue')},
 ]
 
 const router = createRouter({

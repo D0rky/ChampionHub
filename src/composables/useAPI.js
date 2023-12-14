@@ -31,7 +31,7 @@ const getChampions = async () => {
 }
 
 const fetchChampion = async (id) => {
-    const { data } = await api.get(`/api/champion/${id}`)
+    const { data } = await api.get(`/api/champions/${id}`)
     currentChampion.value = data
     console.log(data)
   }
